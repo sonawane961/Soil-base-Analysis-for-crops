@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Soil base Analysis for crops</title>
+    <center>
+        <h1>Soil base Analysis for crops</h1>
+    </center>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="https://www.livemint.com/industry/agriculture">News</a>
+        <a href="about.html">Contact</a>
+        <a href="about_Dattu.html">About</a>
+    </div>
+    <br>
+
+    <style>
+        body {
+            background-image: url('back.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <div class="transbox">
+        <div class="form">
+            <label> Nitrogen level </label>
+            <input id="Nitrogen" placeholder="For ex.300" required><br><br>
+            <label>Pottasium level</label>
+            <input id="Pottasium" placeholder="For ex. 50" required><br><br>
+            <label>Phosphurous level </label>
+            <input id="Phosphurous" placeholder="For ex. 60" required><br><br>
+            <label>pH level</label>
+            <input id="pH" placeholder="For ex.7.2" required><br><br>
+            <label>Moisture level</label>
+            <input id="Moisture" placeholder="For ex. 70" required><br><br>
+            <tr></tr>
+            <center>
+                <input type="button" value="Get Report" onclick=Check() border-radius: "5px"; color: "blueviolet">
+            </center>
+        </div>
+    </div>
+
+    <script>
+        function Check() {
+            var N = document.getElementById("Nitrogen").value;
+            var P = document.getElementById("Pottasium").value;
+            var K = document.getElementById("Phosphurous").value;
+            var pH = document.getElementById("pH").value;
+            var M = document.getElementById("Moisture").value;
+            parseInt(N)
+            parseInt(P)
+            parseInt(K)
+            parseInt(M)
+            parseInt(pH)
+
+            if (183 <= N && N <= 199 && 0 <= P && P < 43 && 100 <= K && K <= 200 && 100 < M && M <= 150 && 0 <= pH && pH < 7) {
+                document.write("Hello<br>Soil has better fertility But moisture level is very low in this field so you need to have good irrigaation system,And you also need to take care of micronuetrients and nutrients of soil but you can take below crops in this field<br>1)Cotton<br> 2)groundnut<br>3)Maize<br><br>And Use following fertilizers1)20-20-0<br>2)10-26-26")
+            } else if (200 <= N && N <= 400 && 43 <= P && P <= 100 && 50 <= K && K <= 100 && 60 <= M && M <= 100 && 7 <= pH && pH <= 7.5) {
+                document.write("Hello <br>This soil has more moisture value so the soil is more wet then dont need to worry about irrigation of soil as it is detected more muddy,so we are suggesting you crops accordingly,but take care of you can take below crops in this field<br>1)Rice<br> 2)Sugarcane<br>3)Coconut<br>And Use following fertilizers1)20-20-0<br>2)10-26-26")
+            } else {
+                document.write("No fertiable soil")
+            }
+
+
+        }
+    </script><br>
+    <br><br><br><br><br>
+    <br><br><br><br>
+
+
+
+
+    </div>
+</body>
+
+
+
+
+
+</html>
